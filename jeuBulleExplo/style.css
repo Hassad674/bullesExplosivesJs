@@ -1,0 +1,34 @@
+/* Style pour le corps de la page */
+body {
+  overflow: hidden; /* Empêche le défilement de la page */
+  min-height: 100vh; /* Assure que le corps de la page prend au moins 100% de la hauteur de la fenêtre */
+  cursor: crosshair; /* Définit le curseur de la souris en forme de viseur */
+}
+
+/* Style pour les bulles */
+.bubble {
+  position: absolute; /* Position absolue pour placer les bulles sur la page */
+  border-radius: 300px; /* Forme de la bulle */
+  background: rgba(0, 166, 255, 0.6); /* Couleur de fond de la bulle avec transparence */
+  opacity: 0; /* Opacité initial à 0 pour l'animation d'apparition */
+  animation: bubbleAnim 8s forwards; /* Animation pour déplacer la bulle */
+  filter: hue-rotate(0deg); /* Rotation de la teinte de la bulle */
+}
+
+/* Animation de la bulle */
+@keyframes bubbleAnim {
+  to {
+    top: -250px; /* Déplacement de la bulle vers le haut */
+    left: var(--leftPos); /* Déplacement horizontal aléatoire */
+    opacity: 1; /* Opacité finale de la bulle */
+    filter: hue-rotate(720deg); /* Rotation de la teinte finale de la bulle */
+  }
+}
+
+/* Style pour les titres */
+h3 {
+  font-size: 10rem; /* Taille de police du titre */
+  text-align: center; /* Centrage du titre */
+  margin-top: 20px; /* Marge en haut du titre */
+  color: rgba(128, 128, 128, 0.555); /* Couleur du titre avec transparence */
+}
